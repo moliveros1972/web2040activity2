@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css">
+<style type="text/css">
+.navbar {
+color: green;
+background-color: #ff9900;
+}
+h1 {
+color: #ff9900;
+margin-top: 30vh;
+}
+p {
+width: 36vw;
+}
+div {
+margin-left: 85px;
+}
+</style>
+<meta charset="UTF-8">
+<title>Activity2</title>
+</head>
+<body>
+
+	<div class="blog">
+ <div class="container">
+ <h1 class="text-center">My Class</h1>
+  <div class="row">
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="teacher.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">My Teacher</h4>
+      <p class="card-text">
+       This is the Best Class Ever!!
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="classmate.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+        <h4 class="card-title">MY Classmates</h4>
+      <p class="card-text">
+       My fellow Students!!!
+       
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-4 col-lg-4 col-sm-12">
+    <div class="card">
+     <div class="card-img">
+      <img src="myclass.jpg" class="img-fluid">
+     </div>
+     
+     <div class="card-body">
+     <h4 class="card-title">My Class</h4>
+      <p class="card-text">
+       
+       The Best Teacher Ever!!!
+      </p>
+     </div>
+     <div class="card-footer">
+      <a href="" class="card-link">Read more</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<nav class="navbar navbar-expand-lg fixed-top ">  
+ <a class="navbar-brand" href="#">Home</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+ <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+ <li class="nav-item">
+     <a class="nav-link" data-value="myclass" href="#">My Class</a>        </li>  
+<li class="nav-item">
+    <a class="nav-link " data-value="classmates"href="#">Classmates</a>    
+ </li>
+ <li class="nav-item"> 
+    <a class="nav-link " data-value="teachers" href="#">Teachers</a>         </li>   
+<li class="nav-item">  
+   <a class="nav-link " data-value="school" href="#">School</a>       </li>  
+<li class="nav-item"> 
+ <a class="nav-link " data-value="contact-form" href="#">Contact</a>       </li> 
+</ul> 
+</div></nav>
+
+<div id="myclass">
+<h1>WEB2000 CLASS</h1>
+
+<p>This class was the best class i have taken so far!!!
+</p>
+
+<button class="btn btn-outline-secondary btn-lg" type="button" onClick="change()">See more</button><br>
+
+<img src="glasses2.gif" alt="">
+
+</div>
+
+<div class="contact-form" id="contact-form">
+ <div class="container">
+  <form>
+   <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h1>Get in Touch</h1> 
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 right">
+       <div class="form-group">
+         <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="">
+       </div>
+       <div class="form-group">
+         <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
+       </div>
+       <div class="form-group">
+         <textarea class="form-control form-control-lg">
+          
+         </textarea>
+       </div>
+       <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+    </div>
+   </div>
+  </form>
+ </div>
+</div>
+
+<script type="text/JavaScript">
+function change() {
+var image = document.getElementById("logo");
+image.src = "glasses.gif";
+}
+
+$(".navbar a").click(function(){
+  $("body,html").animate({
+   scrollTop:$("#" + $(this).data('value')).offset().top
+  },1000)
+  
+ })
+</script>
+</body>
+</html>
